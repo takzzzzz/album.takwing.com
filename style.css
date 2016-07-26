@@ -62,6 +62,9 @@ hr{
 	text-shadow: 1px 1px #333333;
 	opacity:1;
 }
+.grid td:hover{
+	opacity:0.7;
+}
 /* CUSTOM BACK LINK */
 .backlink{
     position: fixed; 
