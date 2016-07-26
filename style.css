@@ -49,20 +49,18 @@ hr{
 	text-align:left;
 }
 .grid{
-	margin: 15px;
-	width: 226px;
+	margin: 10px;
 	display: inline-block;
 }
-td{
+.grid td{
+	width:150px;
+	height:150px;
+	padding:0;
 	vertical-align:middle;
-}
-.grid a{
-	text-decoration: none;
-}
-.grid img {
-	-webkit-border-radius:37px;
-	-moz-border-radius:37px;
-	border-radius:37px;
+	text-align:center;
+	color:#ffffff;
+	text-shadow: 1px 1px #333333;
+	opacity:1;
 }
 /* CUSTOM BACK LINK */
 .backlink{
