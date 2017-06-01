@@ -1,7 +1,16 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body{
 	text-align:center;
 	background-color:#333333;
 	color: #aaaaaa;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    font-smooth: always;
+	font-family: "Lato", 'Noto Sans TC', sans-serif !important;
 }
 
 .backlink{
