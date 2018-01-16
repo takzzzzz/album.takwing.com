@@ -29,8 +29,10 @@ function jsonFlickrApi (data) {
 					$('#gallery').append('<a href="'+img+'" data-lity><img src="'+img+'" /></a>');
 					$.getJSON("https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&format=json&api_key=2ab97d85a6a2a8030b4cc4f58fc22e4e&photo_id="+value.id+"&callback=?");
 				});
-				if (data.photoset.page<data.photoset.pages){
-					$.getJSON("https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&format=json&api_key=2ab97d85a6a2a8030b4cc4f58fc22e4e&photoset_id="+data.photoset.id+"&page="+(data.photoset.page+1)+"&callback=?");
+				var pp=data.photoset.page;
+				while (pp<data.photoset.pages){
+					$.getJSON("https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&format=json&api_key=2ab97d85a6a2a8030b4cc4f58fc22e4e&photoset_id="+data.photoset.id+"&page="+(pp+1)+"&callback=?");
+					pp++;
 				}
 			}
 		break;
