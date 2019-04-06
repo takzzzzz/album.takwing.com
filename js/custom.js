@@ -41,8 +41,7 @@ function jsonFlickrApi (data) {
 
 function listAlbums (a){
 	$.each(a, function( index, value ) {
-		$('#index2').append('<a href="https://www.flickr.com/photos/takwing/albums/'+value.id+'" target="tak-flickr"><figure class="album" id="'+value.id+'"></figure></a>');
-//		$('#index2').append('<a href="###"><figure class="album" id="'+value.id+'"></figure></a>');
+		$('#index2').append('<a href="###"><figure class="album" id="'+value.id+'"></figure></a>');
 		$.getJSON("https://www.flickr.com/services/rest/?method=flickr.photosets.getInfo&format=json&api_key=2ab97d85a6a2a8030b4cc4f58fc22e4e&photoset_id="+value.id+"&callback=?");
 	});
 }
