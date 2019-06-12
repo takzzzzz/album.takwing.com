@@ -1,28 +1,319 @@
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>album.takwing.com</title>
 
-	<link href='css/custom.css' rel='stylesheet'>
-	<link href='lity/lity.min.css' rel='stylesheet'>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" type="image/png" href="favicon192.png" sizes="192x192">
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon180.png">
-	<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="range/prism/prism.css">
+	<link rel="stylesheet" href="range/jquery.range.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-	<div id="index">
-		<h2 class="title">album.takwing.com</h2>
-	</div>
-	<div id="index2">
-	</div>
-	<div id="gallery-title">
-	</div>
-	<div id="gallery">
-	</div>
-	<a href="javascript:history.back()"><div class="backlink"><h1>🔙</h1></div></a>
+<h2 class='title'>album.takwing.com</h2>
+
+<form name='filter'>
+<div id='region' class='filter'> 
+<span class='criteria'>region</span>
+<label><input type='radio' name='cat' value='all' checked='checked'><span>All</span></label>
+<label><input type='radio' name='cat' value='HongKong'><span>Hong Kong</span></label>
+<label><input type='radio' name='cat' value='China'><span>China</span></label>
+<label><input type='radio' name='cat' value='NEAsia'><span>NE Asia</span></label>
+<label><input type='radio' name='cat' value='SEAsia'><span>SE Asia</span></label>
+<label><input type='radio' name='cat' value='ISC'><span>South Asia</span></label>
+<label><input type='radio' name='cat' value='MidEast'><span>Middle East</span></label>
+<label><input type='radio' name='cat' value='Europe'><span>Europe</span></label>
+<br>
+</div>
+
+<div id='HongKong' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='HongKong-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='Islands'><span>Outlying Islands</span></label>
+<label><input type='radio' name='subcat' value='Kowloon'><span>Kowloon & New Territories</span></label>
+<label><input type='radio' name='subcat' value='HKIsland'><span>HK Island</span></label>
+<label><input type='radio' name='subcat' value='Events'><span>Events & Others</span></label>
+<br>
+</div>
+
+<div id='China' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='China-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='East'><span>East</span></label>
+<label><input type='radio' name='subcat' value='Central'><span>Central</span></label>
+<label><input type='radio' name='subcat' value='North'><span>North</span></label>
+<label><input type='radio' name='subcat' value='West'><span>West</span></label>
+<label><input type='radio' name='subcat' value='Tibet'><span>Tibet</span></label>
+<br>
+</div>
+
+<div id='NEAsia' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='NEAsia-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='Japan'><span>Japan</span></label>
+<label><input type='radio' name='subcat' value='Taiwan'><span>Taiwan</span></label>
+<label><input type='radio' name='subcat' value='Mongolia'><span>Mongolia</span></label>
+<label><input type='radio' name='subcat' value='Siberia'><span>Siberia</span></label>
+<br>
+</div>
+
+<div id='SEAsia' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='SEAsia-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='Thailand'><span>Thailand</span></label>
+<label><input type='radio' name='subcat' value='Laos'><span>Laos</span></label>
+<label><input type='radio' name='subcat' value='Indonesia'><span>Indonesia</span></label>
+<label><input type='radio' name='subcat' value='Philippines'><span>Philippines</span></label>
+<label><input type='radio' name='subcat' value='Malaysia'><span>Malaysia</span></label>
+<label><input type='radio' name='subcat' value='Singapore'><span>Singapore</span></label>
+<br>
+</div>
+
+<div id='ISC' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='ISC-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='Pakistan'><span>Pakistan</span></label>
+<br>
+</div>
+
+<div id='MidEast' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='MidEast-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='Qatar'><span>Qatar</span></label>
+<label><input type='radio' name='subcat' value='Lebanon'><span>Lebanon</span></label>
+<label><input type='radio' name='subcat' value='Oman'><span>Oman</span></label>
+<label><input type='radio' name='subcat' value='Iran'><span>Iran</span></label>
+<label><input type='radio' name='subcat' value='Turkey'><span>Turkey</span></label>
+<br>
+</div>
+
+<div id='Europe' class='region' class='filter'> 
+<span class='criteria'></span>
+<label><input type='radio' name='subcat' value='all' id='Europe-all'><span>All</span></label>
+<label><input type='radio' name='subcat' value='West'><span>West</span></label>
+<label><input type='radio' name='subcat' value='Iberia'><span>Iberia</span></label>
+<label><input type='radio' name='subcat' value='Balkan'><span>Balkan</span></label>
+<label><input type='radio' name='subcat' value='Central'><span>Central</span></label>
+<label><input type='radio' name='subcat' value='Nordic'><span>Nordic</span></label>
+<br>
+</div>
+
+<div id='year' class='filter'>
+<div class='year'>
+<span class='criteria'>year</span>
+</div>
+<div class='year'>
+<input class="range-slider" type="hidden" value="2002,2019"/>
+</div>
+</div></div>
+
+
+</form>
+
+<div id='albumlist'>
+
+<a id='KNG' class='NEAsia Japan y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhM4ALuwzrSBolMYTEA' target='_blank'>	<figure class='album'><img src='img/KNG.jpg'><figcaption><br>Kanagawa, Japan<br />神奈川</figcaption></figure></a>
+<a id='APC' class='Hongkong Islands y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMBBn7pYf5e_dx741g' target='_blank'>	<figure class='album'><img src='img/APC.jpg'><figcaption><br>Ap Chau & Crooked Island, HK<br />鴨洲 吉澳</figcaption></figure></a>
+<a id='NHL' class='Europe West y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA8VXtCNNIFggExRQ' target='_blank'>	<figure class='album'><img src='img/NHL.jpg'><figcaption><br>North Holland, Netherlands<br /></figcaption></figure></a>
+<a id='KEU' class='Europe West y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMBAuf3Bt7XiK2_rCg' target='_blank'>	<figure class='album'><img src='img/KEU.jpg'><figcaption><br>Keukenhof, Netherlands<br /></figcaption></figure></a>
+<a id='BRU' class='Europe West y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA9LndsKxcPP4au_Q' target='_blank'>	<figure class='album'><img src='img/BRU.jpg'><figcaption><br>Brussels, Belgium<br /></figcaption></figure></a>
+<a id='FLD' class='Europe West y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA_Zljj4VVa9lATtw' target='_blank'>	<figure class='album'><img src='img/FLD.jpg'><figcaption><br>Flenders, Belgium<br /></figcaption></figure></a>
+<a id='WAL' class='Europe West y2019'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA-ro87hv0XgmLAJw' target='_blank'>	<figure class='album'><img src='img/WAL.jpg'><figcaption><br>Walloons, Belgium<br /></figcaption></figure></a>
+<a id='LCW' class='Hongkong Kowloon y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA4RRHsQX_laF_AQQ' target='_blank'>	<figure class='album'><img src='img/LCW.jpg'><figcaption><br>Lai Chi Wo, HK<br />荔枝窩</figcaption></figure></a>
+<a id='YTT' class='Hongkong Islands y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA30aMzxgDlS_mAng' target='_blank'>	<figure class='album'><img src='img/YTT.jpg'><figcaption><br>Yim Tin Tsai, HK<br />鹽田梓</figcaption></figure></a>
+<a id='GIS' class='Hongkong Islands y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA2MMm-4d5Ssl6GZQ' target='_blank'>	<figure class='album'><img src='img/GIS.jpg'><figcaption><br>Grass Island, HK<br />塔門</figcaption></figure></a>
+<a id='KMN' class='NEAsia Japan y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA6KViPNmbzEfsZvg' target='_blank'>	<figure class='album'><img src='img/KMN.jpg'><figcaption><br>Kanmon Straits, Japan<br />関門海峡</figcaption></figure></a>
+<a id='KOK' class='NEAsia Japan y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA5DriRrx-UJ0JBcQ' target='_blank'>	<figure class='album'><img src='img/KOK.jpg'><figcaption><br>Kokura, Japan<br />小倉</figcaption></figure></a>
+<a id='NGT' class='NEAsia Japan y2018'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA7aTyMyrXWtM4uAA' target='_blank'>	<figure class='album'><img src='img/NGT.jpg'><figcaption><br>Nagato-Shimonoseki, Japan<br />長門—下関</figcaption></figure></a>
+<a id='PIS' class='Hongkong Kowloon y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA1xN_PN8vy_nQi0A' target='_blank'>	<figure class='album'><img src='img/PIS.jpg'><figcaption><br>Ping Shan, HK<br />屏山</figcaption></figure></a>
+<a id='PTI' class='Hongkong Islands y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMA0pFzBntb6ARHpng' target='_blank'>	<figure class='album'><img src='img/PTI.jpg'><figcaption><br>Po Toi Island, HK<br />蒲台島</figcaption></figure></a>
+<a id='TPC' class='Hongkong Islands y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAzu3wN8FT9hBYnTg' target='_blank'>	<figure class='album'><img src='img/TPC.jpg'><figcaption><br>Tung Ping Chau, HK<br />東平洲</figcaption></figure></a>
+<a id='LKE' class='Hongkong Kowloon y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAyJS74ewediQAnng' target='_blank'>	<figure class='album'><img src='img/LKE.jpg'><figcaption><br>High Island Resevoir & Long Ke, HK<br />萬宜水庫 浪茄</figcaption></figure></a>
+<a id='TTM' class='Hongkong Kowloon y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAx3mqvyuHtJYuX7w' target='_blank'>	<figure class='album'><img src='img/TTM.jpg'><figcaption><br>Tsuen Wan-Tuen Mun, HK<br />荃灣-屯門</figcaption></figure></a>
+<a id='TLI' class='Hongkong Islands y2017'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAw52dUGQjkCo_zHw' target='_blank'>	<figure class='album'><img src='img/TLI.jpg'><figcaption><br>Tung Lung Island, HK<br />東龍島</figcaption></figure></a>
+<a id='CSP' class='Hongkong Kowloon y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAvbf85U6zkRnz8bA' target='_blank'>	<figure class='album'><img src='img/CSP.jpg'><figcaption><br>Castle Peak, HK<br />青山</figcaption></figure></a>
+<a id='WCI' class='Hongkong HKIsland y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAug2u2IQclTFW0OQ' target='_blank'>	<figure class='album'><img src='img/WCI.jpg'><figcaption><br>Wanchai-Aberdeen, HK<br />灣仔-香港仔</figcaption></figure></a>
+<a id='KLP' class='Hongkong Kowloon y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAtYwmBxovyCfcb7Q' target='_blank'>	<figure class='album'><img src='img/KLP.jpg'><figcaption><br>Kowloon Peak, HK<br />飛鵝山</figcaption></figure></a>
+<a id='TUO' class='Hongkong Lantau y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAsx5Otw1KOMg6F-g' target='_blank'>	<figure class='album'><img src='img/TUO.jpg'><figcaption><br>Tung O Ancient Trail, HK<br />東澳古道</figcaption></figure></a>
+<a id='CAG' class='Hongkong Kowloon y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMArEd3b8wXNhl4HuQ' target='_blank'>	<figure class='album'><img src='img/CAG.jpg'><figcaption><br>Cape D’Aguilar, HK<br />鶴咀</figcaption></figure></a>
+<a id='LIO' class='Hongkong Kowloon y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAq0OCWNnT80wbvGg' target='_blank'>	<figure class='album'><img src='img/LIO.jpg'><figcaption><br>Amah & Lion Rocks, HK<br />望夫石 獅子山</figcaption></figure></a>
+<a id='STA' class='Europe Iberia y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMApt1wFtpzpm7L9TA' target='_blank'>	<figure class='album'><img src='img/STA.jpg'><figcaption><br>Sintra & Cascais, Portugal<br /></figcaption></figure></a>
+<a id='LIS' class='Europe Iberia y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAo_PzVBQpMvVRL-A' target='_blank'>	<figure class='album'><img src='img/LIS.jpg'><figcaption><br>Lisbon, Portugal<br /></figcaption></figure></a>
+<a id='DUO' class='Europe Iberia y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAnkQ7qicJEDTFT8A' target='_blank'>	<figure class='album'><img src='img/DUO.jpg'><figcaption><br>Duoro Valley, Portugal<br /></figcaption></figure></a>
+<a id='MNO' class='Europe Iberia y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAmOjN_ib-Kl6EhpA' target='_blank'>	<figure class='album'><img src='img/MNO.jpg'><figcaption><br>Minho, Portugal<br /></figcaption></figure></a>
+<a id='PTO' class='Europe Iberia y2016'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAl76xIVa0LIJWgEA' target='_blank'>	<figure class='album'><img src='img/PTO.jpg'><figcaption><br>Porto, Portugal<br /></figcaption></figure></a>
+<a id='KHY' class='SEAsia Thailand y2015'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpnZ3PUwpA7izozqQ' target='_blank'>	<figure class='album'><img src='img/KHY.jpg'><figcaption><br>Khao Yai, Thailand<br /></figcaption></figure></a>
+<a id='CMI' class='SEAsia Thailand y2015 y2012'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAjgWRd2STEaCSurQ' target='_blank'>	<figure class='album'><img src='img/CMI.jpg'><figcaption><br>Chiang Mai, Thailand<br /></figcaption></figure></a>
+<a id='TPE' class='NEAsia Taiwan y2015'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpmlSp4RptPu2HcdA' target='_blank'>	<figure class='album'><img src='img/TPE.jpg'><figcaption><br>Taipei, Taiwan<br />臺北</figcaption></figure></a>
+<a id='TMS' class='Hongkong Kowloon y2015'	 href='https://1drv.ms/a/s!Ai4XxZ9iLG3KhLplP6EKoBN65rb3eQ' target='_blank'>	<figure class='album'><img src='img/TMS.jpg'><figcaption><br>Tai Mo Shan, HK<br />大帽山</figcaption></figure></a>
+<a id='TNN' class='NEAsia Taiwan y2014'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpkg4dBXaHUyHZxnA' target='_blank'>	<figure class='album'><img src='img/TNN.jpg'><figcaption><br>Tainan, Taiwan<br />臺南</figcaption></figure></a>
+<a id='BLG' class='Europe Balkan y2014'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpjdlaKuGgh5poabA' target='_blank'>	<figure class='album'><img src='img/BLG.jpg'><figcaption><br>Bulgaria<br /></figcaption></figure></a>
+<a id='OKA' class='NEAsia Japan y2013'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpiu1vbYf2yNwLNNw' target='_blank'>	<figure class='album'><img src='img/OKA.jpg'><figcaption><br>Okinawa, Japan<br />沖繩</figcaption></figure></a>
+<a id='CTW' class='NEAsia Taiwan y2013'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLph_Leyuj9PhVMtVw' target='_blank'>	<figure class='album'><img src='img/CTW.jpg'><figcaption><br>Central Taiwan<br />中臺灣</figcaption></figure></a>
+<a id='NLD' class='Europe West y2013 y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpdYxlXYIvZ7sGnfQ' target='_blank'>	<figure class='album'><img src='img/NLD.jpg'><figcaption><br>Netherlands<br /></figcaption></figure></a>
+<a id='CRI' class='SEAsia Thailand y2012'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhMAkR5kAaqLcQpy3sQ' target='_blank'>	<figure class='album'><img src='img/CRI.jpg'><figcaption><br>Chiang Rai, Thailand<br /></figcaption></figure></a>
+<a id='JVA' class='SEAsia Indonesia y2012'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpgoVks9Nc5q_iKbw' target='_blank'>	<figure class='album'><img src='img/JVA.jpg'><figcaption><br>Java, Indonesia<br /></figcaption></figure></a>
+<a id='WLP' class='Hongkong Kowloon y2011'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpfuJW5dfO2nK4B1g' target='_blank'>	<figure class='album'><img src='img/WLP.jpg'><figcaption><br>HK Wetland Park<br />香港濕地公園</figcaption></figure></a>
+<a id='OCP' class='Hongkong HKIsland y2011 y2006'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg6YAaVhEbC5l-6NxTw' target='_blank'>	<figure class='album'><img src='img/OCP.jpg'><figcaption><br>Ocean Park HK<br />海洋公園</figcaption></figure></a>
+<a id='MDM' class='Hongkong HKIsland y2011'	 href='https://1drv.ms/a/s!Ai4XxZ9iLG3KhLpeVGxPD00Q2oiMpA' target='_blank'>	<figure class='album'><img src='img/MDM.jpg'><figcaption><br>HK Maritime Defense Museum<br />香港海防博物館</figcaption></figure></a>
+<a id='CDE' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpcMHTBm8Iw0h-n9g' target='_blank'>	<figure class='album'><img src='img/CDE.jpg'><figcaption><br>Chengde, China<br />河北 承德</figcaption></figure></a>
+<a id='ANY' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpbvB5jF4aPfv3BGg' target='_blank'>	<figure class='album'><img src='img/ANY.jpg'><figcaption><br>Anyang, China<br />河南 安陽</figcaption></figure></a>
+<a id='KFG' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpaiI5N2z-yu9oDgg' target='_blank'>	<figure class='album'><img src='img/KFG.jpg'><figcaption><br>Kaifeng, China<br />河南 開封</figcaption></figure></a>
+<a id='SOS' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpZMeCx_QXQpUEIWw' target='_blank'>	<figure class='album'><img src='img/SOS.jpg'><figcaption><br>Songshan, China<br />河南 嵩山</figcaption></figure></a>
+<a id='LMG' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpYU5dL8sl94jaJjw' target='_blank'>	<figure class='album'><img src='img/LMG.jpg'><figcaption><br>Longmen Grottos, China<br />河南 龍門石窟</figcaption></figure></a>
+<a id='LOY' class='China North y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpX42_k9qDBEMrhDw' target='_blank'>	<figure class='album'><img src='img/LOY.jpg'><figcaption><br>Loyang, China<br />河南 洛陽</figcaption></figure></a>
+<a id='FMN' class='China West y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpVJ7rGPupuAWC1uA' target='_blank'>	<figure class='album'><img src='img/FMN.jpg'><figcaption><br>Famen Temple, China<br />陝西 法門寺</figcaption></figure></a>
+<a id='HYL' class='China West y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpUmanjVeXBQS7TAw' target='_blank'>	<figure class='album'><img src='img/HYL.jpg'><figcaption><br>Han Yangling Mausoleum, China<br />陝西 漢陽陵</figcaption></figure></a>
+<a id='HUK' class='China West y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpT-vUglJNbN2krwg' target='_blank'>	<figure class='album'><img src='img/HUK.jpg'><figcaption><br>Hukou Waterfall, China<br />壺口瀑布</figcaption></figure></a>
+<a id='TCA' class='China West y2010 y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoiDAGBPJYRHaINDA' target='_blank'>	<figure class='album'><img src='img/TCA.jpg'><figcaption><br>Terracotta Army, China<br />西安 兵馬俑</figcaption></figure></a>
+<a id='HQS' class='China West y2010 y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoeOl_BHkCbGr-vUQ' target='_blank'>	<figure class='album'><img src='img/HQS.jpg'><figcaption><br>Huaqing Springs, China<br />西安 華清池</figcaption></figure></a>
+<a id='XIA' class='China West y2010 y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoZNI-oRYabUjm0Nw' target='_blank'>	<figure class='album'><img src='img/XIA.jpg'><figcaption><br>Xi’an, China<br />西安</figcaption></figure></a>
+<a id='RWM' class='Hongkong Kowloon y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpSIRUzWw3g0qLgLA' target='_blank'>	<figure class='album'><img src='img/RWM.jpg'><figcaption><br>HK Railway Museum<br />香港鐵路博物館</figcaption></figure></a>
+<a id='JJG' class='China Central y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpRDJ4DwMZZKTCf5w' target='_blank'>	<figure class='album'><img src='img/JJG.jpg'><figcaption><br>Jiujiang, China<br />江西 九江</figcaption></figure></a>
+<a id='LUS' class='China Central y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpQgM0x-TkvM73xlQ' target='_blank'>	<figure class='album'><img src='img/LUS.jpg'><figcaption><br>Lushan, China<br />江西 廬山</figcaption></figure></a>
+<a id='WDS' class='China Central y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgZFYnBZaDJ54o-I5ZQ' target='_blank'>	<figure class='album'><img src='img/WDS.jpg'><figcaption><br>Wudangshan, China<br />湖北 武當山</figcaption></figure></a>
+<a id='XIF' class='China Central y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpO0YGTc2LiQktK3g' target='_blank'>	<figure class='album'><img src='img/XIF.jpg'><figcaption><br>Xiangfan, China<br />湖北 襄樊</figcaption></figure></a>
+<a id='WUH' class='China Central y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpNIVKrrks2QduljQ' target='_blank'>	<figure class='album'><img src='img/WUH.jpg'><figcaption><br>Wuhan, China<br />湖北 武漢</figcaption></figure></a>
+<a id='SHK' class='Hongkong Events y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpKa5dBKMbkhWpClQ' target='_blank'>	<figure class='album'><img src='img/SHK.jpg'><figcaption><br>Songkran HK 2010<br />潑水節(香港)</figcaption></figure></a>
+<a id='NPG' class='Hongkong Lantau y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpLeccr4scwqMBvyA' target='_blank'>	<figure class='album'><img src='img/NPG.jpg'><figcaption><br>Ngong Ping & Tai O, HK<br />昂坪 大澳</figcaption></figure></a>
+<a id='KHH' class='NEAsia Taiwan y2010'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpWjz9IFEsp5NwF_Q' target='_blank'>	<figure class='album'><img src='img/KHH.jpg'><figcaption><br>Kaohsiung, Taiwan<br />高雄</figcaption></figure></a>
+<a id='KMG' class='China West y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpJmzVX52FoE7mSNg' target='_blank'>	<figure class='album'><img src='img/KMG.jpg'><figcaption><br>Kunming, Yunnan<br />雲南 昆明</figcaption></figure></a>
+<a id='LPB' class='SEAsia Laos y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpINWxn5Sfw_EevxA' target='_blank'>	<figure class='album'><img src='img/LPB.jpg'><figcaption><br>Luang Prabang, Laos<br /></figcaption></figure></a>
+<a id='VVG' class='SEAsia Laos y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpH1HPynu2xKYSdDg' target='_blank'>	<figure class='album'><img src='img/VVG.jpg'><figcaption><br>Vang Vieng, Laos<br /></figcaption></figure></a>
+<a id='VTE' class='SEAsia Laos y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpGownSQLurpstJkA' target='_blank'>	<figure class='album'><img src='img/VTE.jpg'><figcaption><br>Vientiane, Laos<br /></figcaption></figure></a>
+<a id='SPD' class='SEAsia Laos y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpF6aClOdFGPQPx5g' target='_blank'>	<figure class='album'><img src='img/SPD.jpg'><figcaption><br>Si Phan Don, Laos<br /></figcaption></figure></a>
+<a id='PHP' class='SEAsia Cambodia y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpErzzetsCoIxXQmg' target='_blank'>	<figure class='album'><img src='img/PHP.jpg'><figcaption><br>Phnom Penh, Cambodia<br /></figcaption></figure></a>
+<a id='ANK' class='SEAsia Cambodia y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpDhD25GQVM3HtDGg' target='_blank'>	<figure class='album'><img src='img/ANK.jpg'><figcaption><br>Ankhor, Cambodia<br /></figcaption></figure></a>
+<a id='AYU' class='SEAsia Thailand y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpCNzBnHJrTh6OnBQ' target='_blank'>	<figure class='album'><img src='img/AYU.jpg'><figcaption><br>Ayutthaya, Thailand<br /></figcaption></figure></a>
+<a id='CPY' class='SEAsia Thailand y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpBx8qKLuYSCFAjZA' target='_blank'>	<figure class='album'><img src='img/CPY.jpg'><figcaption><br>Chao Phraya River, Thailand<br /></figcaption></figure></a>
+<a id='HGS' class='China West y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLpALLj_6uOrHH_3AQ' target='_blank'>	<figure class='album'><img src='img/HGS.jpg'><figcaption><br>Huangguoshu Falls, China<br />貴州 黃果樹瀑布</figcaption></figure></a>
+<a id='KWE' class='China West y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo_sVakaVPqgD4f-g' target='_blank'>	<figure class='album'><img src='img/KWE.jpg'><figcaption><br>Guiyang, China<br />貴州 貴陽</figcaption></figure></a>
+<a id='PAK' class='ISC Pakistan y2009'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo-OQF6ODL80nCppQ' target='_blank'>	<figure class='album'><img src='img/PAK.jpg'><figcaption><br>Pakistan<br /></figcaption></figure></a>
+<a id='LEB' class='MidEast Lebanon y2008'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo9MszzgYZKnuoFOg' target='_blank'>	<figure class='album'><img src='img/LEB.jpg'><figcaption><br>Lebanon<br /></figcaption></figure></a>
+<a id='OMN' class='MidEast Oman y2008'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo7XQZyMh8XOEYwSg' target='_blank'>	<figure class='album'><img src='img/OMN.jpg'><figcaption><br>Oman<br /></figcaption></figure></a>
+<a id='THR' class='MidEast Iran y2008'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo6OZm46jW5TLP5Kw' target='_blank'>	<figure class='album'><img src='img/THR.jpg'><figcaption><br>Tehran, Iran<br /></figcaption></figure></a>
+<a id='LON' class='Europe West y2008 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgc1j8S8oFyeEccX17A' target='_blank'>	<figure class='album'><img src='img/LON.jpg'><figcaption><br>London<br /></figcaption></figure></a>
+<a id='SAQ' class='MidEast Qatar y2008 y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo39XbAHuAMcWSlNg' target='_blank'>	<figure class='album'><img src='img/SAQ.jpg'><figcaption><br>Desert Safari, Qatar<br /></figcaption></figure></a>
+<a id='THE' class='Europe Balkan y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo5rWwZRYCfuOeiNg' target='_blank'>	<figure class='album'><img src='img/THE.jpg'><figcaption><br>Thessaloniki, Greece<br /></figcaption></figure></a>
+<a id='IST' class='MidEast Turkey y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo4YV27cdyqBTjCeA' target='_blank'>	<figure class='album'><img src='img/IST.jpg'><figcaption><br>Istanbul, Turkey<br /></figcaption></figure></a>
+<a id='QTR' class='MidEast Qatar y2008 y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo2SLm6utHiIvzBzA' target='_blank'>	<figure class='album'><img src='img/QTR.jpg'><figcaption><br>Qatar (Miscellaneous)<br /></figcaption></figure></a>
+<a id='KLS' class='China East y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo1NCofdfS2OnqxbA' target='_blank'>	<figure class='album'><img src='img/KLS.jpg'><figcaption><br>Kulangsu, China<br />福建 廈門 鼓浪嶼</figcaption></figure></a>
+<a id='CEB' class='SEAsia Philippines y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLo0juhJYPdENjBuag' target='_blank'>	<figure class='album'><img src='img/CEB.jpg'><figcaption><br>Cebu, Philippines<br /></figcaption></figure></a>
+<a id='HYO' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoz1mOq_9I2W50j-w' target='_blank'>	<figure class='album'><img src='img/HYO.jpg'><figcaption><br>Huangyao, China<br />廣西 黃姚</figcaption></figure></a>
+<a id='YSH' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoyPR3jkoMH17j-Bw' target='_blank'>	<figure class='album'><img src='img/YSH.jpg'><figcaption><br>Yangshuo, China<br />廣西 陽朔</figcaption></figure></a>
+<a id='LIJ' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLowqHK-PQZ3VF5kvg' target='_blank'>	<figure class='album'><img src='img/LIJ.jpg'><figcaption><br>Lijiang - Dali, China<br />雲南 麗江-大理</figcaption></figure></a>
+<a id='DQN' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLosa0hZ2_eeZvVoEg' target='_blank'>	<figure class='album'><img src='img/DQN.jpg'><figcaption><br>Deqin - Zhongdian, China<br />雲南 德欽-中甸</figcaption></figure></a>
+<a id='PSH' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLorYgf_trnURY0YDw' target='_blank'>	<figure class='album'><img src='img/PSH.jpg'><figcaption><br>Pasho, Tibet<br />西藏 八宿</figcaption></figure></a>
+<a id='RWK' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLoqnvaD-VgZuaY-kg' target='_blank'>	<figure class='album'><img src='img/RWK.jpg'><figcaption><br>Rawok-Tso, Tibet<br />西藏 然烏錯</figcaption></figure></a>
+<a id='TIB' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLopBqe6Fw3NVS4d9g' target='_blank'>	<figure class='album'><img src='img/TIB.jpg'><figcaption><br>Route 318, Tibet<br />318 國道(西藏)</figcaption></figure></a>
+<a id='LNG' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLooKqdR-8gIlkU8Xg' target='_blank'>	<figure class='album'><img src='img/LNG.jpg'><figcaption><br>Lunang, Tibet<br />西藏 魯朗</figcaption></figure></a>
+<a id='DKS' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLon8LqEw3NNepuq1Q' target='_blank'>	<figure class='album'><img src='img/DKS.jpg'><figcaption><br>Draksum-Tso, Tibet<br />西藏 巴松錯</figcaption></figure></a>
+<a id='LHA' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLomcKG26RPdYhCxSg' target='_blank'>	<figure class='album'><img src='img/LHA.jpg'><figcaption><br>Lhasa, Tibet<br />西藏 拉薩</figcaption></figure></a>
+<a id='TBR' class='China Tibet y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLolcO-H_z2V59e5EQ' target='_blank'>	<figure class='album'><img src='img/TBR.jpg'><figcaption><br>Tibetan Railway<br />青藏鐵路</figcaption></figure></a>
+<a id='HUA' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KhLojifmzBhomlOauLg' target='_blank'>	<figure class='album'><img src='img/HUA.jpg'><figcaption><br>Huashan, China<br />華山</figcaption></figure></a>
+<a id='JZG' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg6Z8fNDVXmsBz9v8Dw' target='_blank'>	<figure class='album'><img src='img/JZG.jpg'><figcaption><br>Jiuzhaigou, China<br />九寨溝</figcaption></figure></a>
+<a id='LES' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KxjTN2zL9nht4TEDB' target='_blank'>	<figure class='album'><img src='img/LES.jpg'><figcaption><br>Leshan, China<br />樂山</figcaption></figure></a>
+<a id='SIC' class='China West y2007'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3K3ymc0oCEoxDEz3Fy' target='_blank'>	<figure class='album'><img src='img/SIC.jpg'><figcaption><br>Sichuan, China (Misc)<br />四川</figcaption></figure></a>
+<a id='CCF' class='Hongkong Islands y2006'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg6V93iOjNnY6J3cu9Q' target='_blank'>	<figure class='album'><img src='img/CCF.jpg'><figcaption><br>Cheung Chau Bun Festival, HK<br />長洲太平清醮</figcaption></figure></a>
+<a id='DIS' class='Hongkong Islands y2006'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg6ViJQp6gyh5Clizaw' target='_blank'>	<figure class='album'><img src='img/DIS.jpg'><figcaption><br>Disneyland HK <br />香港迪士尼樂園</figcaption></figure></a>
+<a id='FMP' class='SEAsia Thailand y2006'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg6BPeL-lVBm68DSvgg' target='_blank'>	<figure class='album'><img src='img/FMP.jpg'><figcaption><br>Full Moon Party, Thailand<br /></figcaption></figure></a>
+<a id='ZZH' class='China East y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg51sJLQl4e0vo2FS6w' target='_blank'>	<figure class='album'><img src='img/ZZH.jpg'><figcaption><br>Zhouzhuang, China<br />周莊</figcaption></figure></a>
+<a id='SUZ' class='China East y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg5p_7FaA62rIVFQklQ' target='_blank'>	<figure class='album'><img src='img/SUZ.jpg'><figcaption><br>Suzhou, China<br />蘇州</figcaption></figure></a>
+<a id='SHA' class='China East y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg5pVBYGERF5c4qa74Q' target='_blank'>	<figure class='album'><img src='img/SHA.jpg'><figcaption><br>Shanghai, China<br />上海</figcaption></figure></a>
+<a id='TAO' class='China East y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg5laYDOo1216Wryimg' target='_blank'>	<figure class='album'><img src='img/TAO.jpg'><figcaption><br>Qingdao, China<br />青島</figcaption></figure></a>
+<a id='PEK' class='China North y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c_8QCn-fSbNw-_Zw' target='_blank'>	<figure class='album'><img src='img/PEK.jpg'><figcaption><br>Peking, China<br />北京</figcaption></figure></a>
+<a id='MON' class='NEAsia Mongolia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c-KPmX7AcgR5X84w' target='_blank'>	<figure class='album'><img src='img/MON.jpg'><figcaption><br>Mongolia<br /></figcaption></figure></a>
+<a id='BKL' class='NEAsia Siberia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c9ShYsMcDqCSTdKA' target='_blank'>	<figure class='album'><img src='img/BKL.jpg'><figcaption><br>Lake Baikal, Siberia<br /></figcaption></figure></a>
+<a id='IRK' class='NEAsia Siberia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c8NSSkWsXiTTRhTA' target='_blank'>	<figure class='album'><img src='img/IRK.jpg'><figcaption><br>Irkutsk, Siberia<br /></figcaption></figure></a>
+<a id='GDR' class='Europe Russia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c73qcSOkqv6Xc3TQ' target='_blank'>	<figure class='album'><img src='img/GDR.jpg'><figcaption><br>Golden Ring, Russia<br /></figcaption></figure></a>
+<a id='MOW' class='Europe Russia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c62rtcLJ2Y8hClAA' target='_blank'>	<figure class='album'><img src='img/MOW.jpg'><figcaption><br>Moscow, Russia<br /></figcaption></figure></a>
+<a id='SPB' class='Europe Russia y2005'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c5WYB5X9dFVVq9Vw' target='_blank'>	<figure class='album'><img src='img/SPB.jpg'><figcaption><br>St Petersburg, Russia<br /></figcaption></figure></a>
+<a id='RIG' class='Europe Baltic y2005 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgflajm5d4cOsi9rkBQ' target='_blank'>	<figure class='album'><img src='img/RIG.jpg'><figcaption><br>Riga, Latvia<br /></figcaption></figure></a>
+<a id='LIT' class='Europe Baltic y2005 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflY23wyWwgmbItoQA' target='_blank'>	<figure class='album'><img src='img/LIT.jpg'><figcaption><br>Lithuania<br /></figcaption></figure></a>
+<a id='MRV' class='Europe Central y2004 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kg4c4TByV66kJIbEyaA' target='_blank'>	<figure class='album'><img src='img/MRV.jpg'><figcaption><br>Moravia, Czech Republic<br /></figcaption></figure></a>
+<a id='BOH' class='Europe Central y2004 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflqWeUAH0kajA5s-A' target='_blank'>	<figure class='album'><img src='img/BOH.jpg'><figcaption><br>Bohemia, Czech Republic<br /></figcaption></figure></a>
+<a id='TLD' class='Europe Iberia y2004'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgflpqxe7p91iXgcQEQ' target='_blank'>	<figure class='album'><img src='img/TLD.jpg'><figcaption><br>Toledo, Spain<br /></figcaption></figure></a>
+<a id='GND' class='Europe Iberia y2004'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgflo27iusWEjDpovIQ' target='_blank'>	<figure class='album'><img src='img/GND.jpg'><figcaption><br>Granada, Spain<br /></figcaption></figure></a>
+<a id='SEV' class='Europe Iberia y2004'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflnNBPThTxY71M5KQ' target='_blank'>	<figure class='album'><img src='img/SEV.jpg'><figcaption><br>Seville, Spain<br /></figcaption></figure></a>
+<a id='TIO' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflmdTWCSqC4Bdh4WA' target='_blank'>	<figure class='album'><img src='img/TIO.jpg'><figcaption><br>Pulau Tioman, Malaysia<br /></figcaption></figure></a>
+<a id='MLC' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflltcSPcjXuZRJw1g' target='_blank'>	<figure class='album'><img src='img/MLC.jpg'><figcaption><br>Malacca, Malaysia<br /></figcaption></figure></a>
+<a id='PEN' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgflk63IiP1UJfqzs6Q' target='_blank'>	<figure class='album'><img src='img/PEN.jpg'><figcaption><br>Penang, Malaysia<br /></figcaption></figure></a>
+<a id='CAM' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgfliHLVzSYOMv4NatQ' target='_blank'>	<figure class='album'><img src='img/CAM.jpg'><figcaption><br>Cameron Highlands, Malaysia<br /></figcaption></figure></a>
+<a id='TYO' class='NEAsia Japan y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgflj_OhMsnR4m94OhQ' target='_blank'>	<figure class='album'><img src='img/TYO.jpg'><figcaption><br>Tokyo, Japan<br />東京</figcaption></figure></a>
+<a id='KUC' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflhX9ELVPCfy-i6sQ' target='_blank'>	<figure class='album'><img src='img/KUC.jpg'><figcaption><br>Kuching, Malaysia<br /></figcaption></figure></a>
+<a id='RDG' class='SEAsia Malaysia y2003'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflgUkVWAUkx2xfrEA' target='_blank'>	<figure class='album'><img src='img/RDG.jpg'><figcaption><br>Pulau Redang, Malaysia<br /></figcaption></figure></a>
+<a id='NTW' class='NEAsia Taiwan y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgfldfVGlkx7c-nrE2g' target='_blank'>	<figure class='album'><img src='img/NTW.jpg'><figcaption><br>North Taiwan<br />北臺灣</figcaption></figure></a>
+<a id='TAL' class='Europe Baltic y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflZMzISP1-BXS5RkQ' target='_blank'>	<figure class='album'><img src='img/TAL.jpg'><figcaption><br>Tallinn, Estonia<br /></figcaption></figure></a>
+<a id='POL' class='Europe Central y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflcvkQg-2xXxdV-LQ' target='_blank'>	<figure class='album'><img src='img/POL.jpg'><figcaption><br>Poland<br /></figcaption></figure></a>
+<a id='GER' class='Europe Central y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflbIl3gfsEpvpJLQg' target='_blank'>	<figure class='album'><img src='img/GER.jpg'><figcaption><br>Germany<br /></figcaption></figure></a>
+<a id='CZE' class='Europe Central y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflVeZH7d93qq__ocw' target='_blank'>	<figure class='album'><img src='img/CZE.jpg'><figcaption><br>Czech Republic<br /></figcaption></figure></a>
+<a id='SWE' class='Europe Nordic y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflR0lRrpSvM0FkXBw' target='_blank'>	<figure class='album'><img src='img/SWE.jpg'><figcaption><br>Sweden<br /></figcaption></figure></a>
+<a id='NOR' class='Europe Nordic y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflSpqtPc9subcIrDg' target='_blank'>	<figure class='album'><img src='img/NOR.jpg'><figcaption><br>Norway<br /></figcaption></figure></a>
+<a id='FIN' class='Europe Nordic y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflTONVwJ6jva1HgCg' target='_blank'>	<figure class='album'><img src='img/FIN.jpg'><figcaption><br>Finland<br /></figcaption></figure></a>
+<a id='BUD' class='Europe Central y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflW0To08klIORM-Kg' target='_blank'>	<figure class='album'><img src='img/BUD.jpg'><figcaption><br>Budapest, Hungary<br /></figcaption></figure></a>
+<a id='VIE' class='Europe Central y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflX1Dw0_qA276hdzA' target='_blank'>	<figure class='album'><img src='img/VIE.jpg'><figcaption><br>Vienna, Austria<br /></figcaption></figure></a>
+<a id='DEN' class='Europe Nordic y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgZgYPp41oPRCtx0rcQ' target='_blank'>	<figure class='album'><img src='img/DEN.jpg'><figcaption><br>Denmark<br /></figcaption></figure></a>
+<a id='HKG' class='Hongkong Events y2018 y2017 y2016 y2012 y2011 y2010 y2008 y2006 y2005 y2004 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3KgflfUpaf85RQIVMwyA' target='_blank'>	<figure class='album'><img src='img/HKG.jpg'><figcaption><br>Hong Kong (Miscellaneous)<br /></figcaption></figure></a>
+<a id='SIN' class='SEAsia Singapore y2006 y2003 y2002'	 href='https://1drv.ms/u/s!Ai4XxZ9iLG3Kgfle0oSZxWXHClRPOw' target='_blank'>	<figure class='album'><img src='img/SIN.jpg'><figcaption><br>Singapore (Miscellaneous)<br /></figcaption></figure></a>
+
+</div>
 </body>
-	<script defer src='js/custom2019.js'></script>
-	<script defer src='lity/lity.min.js'></script>
+
+<script src="range/prism/prism.js"></script>
+<script src="range/jquery.range-min.js"></script>
+<script type="text/javascript">
+function display(){
+	var cat = $("input[name='cat']:checked").val();
+	var subcat = $("input[name='subcat']:checked").val();
+	var min = parseInt($('.range-slider').val().substring(0,4));
+	var max = parseInt($('.range-slider').val().substring(5));
+	
+	$('a').hide();
+	
+	for (y=min; y<=max; y++){
+		if (cat=='all'){
+			$('.y'+y).show();
+		} else if (subcat=='all'){
+			$('.'+cat+'.y'+y).show();
+		} else{
+			$('.'+cat+'.'+subcat+'.y'+y).show();
+		}
+	}
+}
+
+$(document).ready(function(){
+	$("input[name='cat']").click(function(){
+		var cat = $("input[name='cat']:checked").val();
+		$('.region').hide();
+		if(cat!='all'){
+			$('#'+cat).show();
+			$("#"+cat+"-all").prop("checked", true);
+		display();
+		}
+	});
+	$("input[name='subcat']").click(function(){
+		display();
+	});
+
+	var w=600;
+	w=$(document).width()*0.8;
+	if (w>600) {w=600;}
+	$('.range-slider').jRange({
+		from: 2002,
+		to: 2019,
+		step: 1,
+		snap:true,
+		format: '%s',
+		width: w,
+		showLabels: true,
+		isRange : true,
+		onstatechange: function(){display();}
+	});
+});
+</script>
 </html>
