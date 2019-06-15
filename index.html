@@ -267,19 +267,6 @@
 <script src="range/prism/prism.js"></script>
 <script src="range/jquery.range-min.js"></script>
 <script type="text/javascript">
-function getUrlVars()
-{
-	var vars = [], hash;
-	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-	for(var i = 0; i < hashes.length; i++)
-	{
-		hash = hashes[i].split('=');
-		vars.push(hash[0]);
-		vars[hash[0]] = hash[1];
-	}
-	return vars;
-}
-
 function display(){
 	var cat = $("input[name='cat']:checked").val();
 	var subcat = $("input[name='subcat']:checked").val();
@@ -303,10 +290,13 @@ $(document).ready(function(){
 	var max=2019;
 	var min=2002;
 
-	var album = getUrlVars()["album"];
-	if ((album!=null)&&($('#'+album).length>0)){
-		$('a').hide();
-		$('#'+album).show();
+	var hash = location.hash;
+	if (hash.length>0){
+		hash=hash.slice(1);
+		if ($('#'+hash).length>0){
+			$('a').hide();
+			$('#'+hash).show();
+		}
 	}
 
 	$("input[name='cat']").click(function(){
