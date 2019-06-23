@@ -1,0 +1,81 @@
+[
+	{
+		"code":"all",
+		"name":"All",
+		"subcats":[
+			{"code":"all",		"name":"All"}
+		]
+	},
+	{	"code":"Hongkong",
+		"name":"Hong Kong",
+		"subcats":[
+			{"code":"all",		"name":"All"},
+			{"code":"Islands",	"name":"Outlying Islands"},
+			{"code":"Kowloon",	"name":"Kowloon & New Territories"},
+			{"code":"HKIsland",	"name":"HK Island"},
+			{"code":"Events",	"name":"Events & Others"}
+		]
+	},
+	{	"code":"China",
+		"name":"China",
+		"subcats":[
+			{"code":"all",		"name":"All"},
+			{"code":"East",		"name":"East"},
+			{"code":"Central",	"name":"Central"},
+			{"code":"North",	"name":"North"},
+			{"code":"West",		"name":"West"},
+			{"code":"Tibet",	"name":"Tibet"}
+		]
+	},
+	{	"code":"NEAsia",
+		"name":"NE Asia",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"Taiwan",	"name":"Taiwan"},
+			{"code":"Japan",	"name":"Japan"},
+			{"code":"Mongolia",	"name":"Mongolia"},
+			{"code":"Siberia",	"name":"Siberia"}
+		]
+	},
+	{	"code":"SEAsia",
+		"name":"SE Asia",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"Thailand",		"name":"Thailand"},
+			{"code":"Laos",			"name":"Laos"},
+			{"code":"Indonesia",	"name":"Indonesia"},
+			{"code":"Philippines",	"name":"Philippines"},
+			{"code":"Malaysia",		"name":"Malaysia"},
+			{"code":"Singapore",	"name":"Singapore"}
+		]
+	},
+	{	"code":"ISC",
+		"name":"South Asia",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"Pakistan",	"name":"Pakistan"}
+		]
+	},
+	{	"code":"MidEast",
+		"name":"Middle East",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"Qatar",	"name":"Qatar"},
+			{"code":"Lebanon",	"name":"Lebanon"},
+			{"code":"Oman",		"name":"Oman"},
+			{"code":"Iran",		"name":"Iran"},
+			{"code":"Turkey",	"name":"Turkey"}
+		]
+	},
+	{	"code":"Europe",
+		"name":"Europe",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"West",		"name":"West"},
+			{"code":"Iberia",	"name":"Iberia"},
+			{"code":"Balkan",	"name":"Balkan"},
+			{"code":"Central",	"name":"Central"},
+			{"code":"Nordic",	"name":"Nordic"}
+		]
+	}
+]

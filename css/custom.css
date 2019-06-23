@@ -46,9 +46,6 @@ form{
 	clear:both;
 	width:100%;
 }
-.region{
-	display:none;
-}
 span.criteria{
 	display:inline-block;
 	font-weight:bold;
@@ -75,12 +72,10 @@ input[name='subcat']:checked + span {
 	border-radius: 1em;
 	color:#fff;
 }
-.slider-container .back-bar .pointer-label {
-    background: initial;
-}
 .filter{
 	text-align:center;
 	margin: 1em auto;
+	clear:both;
 }
 .year{
 	display:inline-block;
