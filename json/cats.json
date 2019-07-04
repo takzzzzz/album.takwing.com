@@ -7,7 +7,7 @@
 		]
 	},
 	{	"code":"Hongkong",
-		"name":"Hong&nbsp;Kong",
+		"name":"Hong Kong",
 		"subcats":[
 			{"code":"all",		"name":"All"},
 			{"code":"Islands",	"name":"Outlying Islands"},
@@ -28,7 +28,7 @@
 		]
 	},
 	{	"code":"NEAsia",
-		"name":"NE&nbsp;Asia",
+		"name":"NE Asia",
 		"subcats":[
 			{"code":"all",	"name":"All"},
 			{"code":"Taiwan",	"name":"Taiwan"},
@@ -38,7 +38,7 @@
 		]
 	},
 	{	"code":"SEAsia",
-		"name":"SE&nbsp;Asia",
+		"name":"SE Asia",
 		"subcats":[
 			{"code":"all",	"name":"All"},
 			{"code":"Thailand",		"name":"Thailand"},
@@ -50,14 +50,14 @@
 		]
 	},
 	{	"code":"ISC",
-		"name":"South&nbsp;Asia",
+		"name":"South Asia",
 		"subcats":[
 			{"code":"all",	"name":"All"},
 			{"code":"Pakistan",	"name":"Pakistan"}
 		]
 	},
 	{	"code":"MidEast",
-		"name":"Middle&nbsp;East",
+		"name":"Middle East",
 		"subcats":[
 			{"code":"all",	"name":"All"},
 			{"code":"Qatar",	"name":"Qatar"},
