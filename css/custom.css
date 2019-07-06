@@ -76,6 +76,7 @@ input[name='subcat']:checked + span {
 	text-align:center;
 	margin: 1em auto;
 	clear:both;
+	max-width:100%;
 }
 .year{
 	display:inline-block;
