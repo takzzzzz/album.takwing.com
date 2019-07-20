@@ -73,7 +73,6 @@ input[name='subcat']:checked + span {
 	color:#fff;
 }
 .filter{
-	overflow:hidden;
 	text-align:center;
 	display:inline-block;
 	margin: 1em auto;
