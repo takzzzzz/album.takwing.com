@@ -74,6 +74,7 @@ input[name='subcat']:checked + span {
 }
 .filter{
 	text-align:center;
+	display:inline-block;
 	margin: 1em auto;
 	clear:both;
 	max-width:100%;
