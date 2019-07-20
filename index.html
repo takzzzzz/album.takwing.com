@@ -12,22 +12,22 @@
 </head>
 
 <body>
-<h2 class='title'>album.takwing.com</h2>
+<h2 class="title">album.takwing.com</h2>
 
-<div id="selectRegion" class='filter'>
+<div id="selectRegion" class="filter">
 	<div class="filter">
-		<span class='criteria'>region</span>
+		<span class="criteria">region</span>
 		<label v-for="(cat,index) in cats"><input type='radio' name='cat' v-model='c' :value="index" @click='s=0'><span>{{cat.name}}</span></label>
 	</div>
 	<div v-show="c>0" class="filter">
-		<span class='criteria'></span>
+		<span class="criteria"></span>
 		<label v-for="(subcat,index) in cats[c].subcats"><input type='radio' name='subcat'  v-model='s' :value="index"><span>{{subcat.name}}</span></label>
 	</div>
 </div>
 
-<div id="selectYear" class='filter'>
-	<div class='year filter'>
-		<span class='criteria'>year</span>
+<div id="selectYear" class="filter">
+	<div class="year filter">
+		<span class="criteria">year</span>
 		<vue-slider ref="slider" v-model="value" v-bind="options" class="year"></vue-slider>
 	</div>
 </div>
