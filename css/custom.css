@@ -30,6 +30,7 @@ figure {
 	display:inline-block;
 	vertical-align:top;
 	width:280px;
+	max-width:75%;
 }
 figure:hover {
 	opacity:0.8;
@@ -42,9 +43,13 @@ form{
 	width: 100%;
 	text-align:center;
 }
-#albumlist{
+#listAlbums{
 	clear:both;
 	width:100%;
+}
+#selectRegion{
+	overflow:hidden;
+	height:auto;
 }
 span.criteria{
 	display:inline-block;
@@ -77,6 +82,7 @@ input[name='subcat']:checked + span {
 	display:inline-block;
 	margin: 1em auto;
 	clear:both;
+	min-width:55%;
 	max-width:100%;
 }
 .year{
