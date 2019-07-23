@@ -17,11 +17,10 @@
 <div id="selectRegion" class="filter">
 	<div class="filter">
 		<span class="criteria">region</span>
-		<label v-for="(cat,index) in cats"><input type='radio' name='cat' v-model='c' :value="index" @click='s=0'><span>{{cat.name}}</span></label>
+		<label v-for="(cat,index) in cats"><input type='radio' name='cat' v-model='c' :value="index" @click='s=0'><span> {{cat.name}} </span></label>
 	</div>
 	<div v-show="c>0" class="filter">
-		<span class="criteria"></span>
-		<label v-for="(subcat,index) in cats[c].subcats"><input type='radio' name='subcat'  v-model='s' :value="index"><span>{{subcat.name}}</span></label>
+		<label v-for="(subcat,index) in cats[c].subcats"><input type='radio' name='subcat'  v-model='s' :value="index"><span> {{subcat.name}} </span></label>
 	</div>
 </div>
 
