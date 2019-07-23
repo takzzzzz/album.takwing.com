@@ -22,8 +22,12 @@ body{
 	color:#ffae1a;
 }
 
-a{
+a, object a{
 	color:#aaaaaa;
+	text-decoration: none;
+}
+object a{
+	font-weight: bold;
 }
 
 figure {
@@ -35,6 +39,9 @@ figure {
 figure:hover {
 	opacity:0.8;
 	color:#ffae1a;
+}
+object a:hover{
+	color:#009ace;
 }
 figure img{
 	width:100%;

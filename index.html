@@ -35,7 +35,7 @@
 	<a v-for="album in albums" v-show="vis(album.cat, album.subcat, album.years)" :id="album.code" :href="album.url" target="_blank">
 		<figure class="album">
 			<img :src="'img/'+album.code+'.jpg'">
-			<figcaption>{{album.label}}<br>{{album.label2}}</figcaption>
+			<figcaption>{{album.label}}<span v-if="album.label2.length>0"><br>{{album.label2}}</span><object v-if="album.blog.length>0"><br><a :href="album.blogurl" target="_blank">延伸閱讀：{{album.blog}}</a></object></figcaption>
 		</figure>
 	</a>
 </div>
