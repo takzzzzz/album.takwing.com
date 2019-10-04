@@ -32,6 +32,7 @@
 		"subcats":[
 			{"code":"all",	"name":"All"},
 			{"code":"Taiwan",	"name":"Taiwan"},
+			{"code":"Korea",	"name":"Korea"},
 			{"code":"Japan",	"name":"Japan"},
 			{"code":"Mongolia",	"name":"Mongolia"},
 			{"code":"Siberia",	"name":"Siberia"}
