@@ -46,7 +46,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 
 <script>
-var yearRange = [2002,2019];
+var d = new Date();
+var y = d.getFullYear();
+var yearRange = [2002,y];
 
 var w=(document.body.clientWidth*0.8);
 if (w>600) w=600;
