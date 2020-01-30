@@ -42,6 +42,7 @@
 		"name":"SE Asia",
 		"subcats":[
 			{"code":"all",	"name":"All"},
+			{"code":"Myanmar",		"name":"Myanmar"},
 			{"code":"Thailand",		"name":"Thailand"},
 			{"code":"Laos",			"name":"Laos"},
 			{"code":"Indonesia",	"name":"Indonesia"},
