@@ -8,7 +8,7 @@
 {"code":"LKK",	"label":"Lai Chi Wo - Luk Keng, HK",	"label2":"荔枝窩-鹿頸",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhopL3q7V8fMj-Sg6vw",	"cat":"Hongkong",	"subcat":"Kowloon",	"years":[2020],	"blog":"",	"blogurl":""},
 {"code":"LTU",	"label":"Lantau Ferry Excursion, HK",	"label2":"大嶼山遊船河",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3Khfp5nuiGEqi_-h79aw",	"cat":"Hongkong",	"subcat":"Islands",	"years":[2020],	"blog":"",	"blogurl":""},
 {"code":"RGN",	"label":"Yangon, Myanmar",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhaoM7CqnNkmIxg49UQ",	"cat":"SEAsia",	"subcat":"Myanmar",	"years":[2020],	"blog":"仰光好陽光",	"blogurl":"https://takwing.com/yangon"},
-{"code":"KMJ",	"label":"Kumamoto, Japan",	"label2":"熊本",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhaFjx0LWfFyf7TpESQ",	"cat":"NEAsia",	"subcat":"Japan",	"years":[2019],	"blog":"",	"blogurl":""},
+{"code":"KMJ",	"label":"Kumamoto, Japan",	"label2":"熊本",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhaFjx0LWfFyf7TpESQ",	"cat":"NEAsia",	"subcat":"Japan",	"years":[2019],	"blog":"周末 GoTo熊本",	"blogurl":"https://hidie.net/kumamoto/"},
 {"code":"KYK",	"label":"Kyoto & Koyasan, Japan",	"label2":"京都 及 高野山",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhZ4RhkKquhUyBSfd4g",	"cat":"NEAsia",	"subcat":"Japan",	"years":[2019],	"blog":"京都と和歌山",	"blogurl":"https://takwing.com/koyasan"},
 {"code":"GGB",	"label":"Gyeongju & Busan, Korea",	"label2":"慶州 釜山",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KhZoMYTVGag7U4Hv-Bg",	"cat":"NEAsia",	"subcat":"Korea",	"years":[2019],	"blog":"",	"blogurl":""},
 {"code":"TRK",	"label":"Istanbul & Cappadocia, Turkey",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3Khfp62S9C_ntXrVNe-g",	"cat":"MidEast",	"subcat":"Turkey",	"years":[2019],	"blog":"高溫熱氣土耳其",	"blogurl":"https://takwing.com/turkey"},
@@ -155,6 +155,6 @@
 {"code":"BUD",	"label":"Budapest, Hungary",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KgflW0To08klIORM-Kg",	"cat":"Europe",	"subcat":"Central",	"years":[2002],	"blog":"",	"blogurl":""},
 {"code":"VIE",	"label":"Vienna, Austria",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KgflX1Dw0_qA276hdzA",	"cat":"Europe",	"subcat":"Central",	"years":[2002],	"blog":"",	"blogurl":""},
 {"code":"DEN",	"label":"Denmark",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KgZgYPp41oPRCtx0rcQ",	"cat":"Europe",	"subcat":"Nordic",	"years":[2002],	"blog":"",	"blogurl":""},
-{"code":"HKG",	"label":"Hong Kong (Miscellaneous)",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KgflfUpaf85RQIVMwyA",	"cat":"Hongkong",	"subcat":"Events",	"years":[2018, 2017, 2016, 2012, 2011, 2010, 2008, 2006, 2005, 2004, 2002],	"blog":"",	"blogurl":""},
+{"code":"HKG",	"label":"Hong Kong (Miscellaneous)",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3KgflfUpaf85RQIVMwyA",	"cat":"Hongkong",	"subcat":"Events",	"years":[2020, 2018, 2017, 2016, 2012, 2011, 2010, 2008, 2006, 2005, 2004, 2002],	"blog":"",	"blogurl":""},
 {"code":"SIN",	"label":"Singapore (Miscellaneous)",	"label2":"",	"url":"https://1drv.ms/u/s!Ai4XxZ9iLG3Kgfle0oSZxWXHClRPOw",	"cat":"SEAsia",	"subcat":"Singapore",	"years":[2006, 2003, 2002],	"blog":"",	"blogurl":""}
 ]								
