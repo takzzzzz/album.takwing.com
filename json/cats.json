@@ -79,5 +79,12 @@
 			{"code":"Central",	"name":"Central"},
 			{"code":"Nordic",	"name":"Nordic"}
 		]
+	},
+	{	"code":"UK",
+		"name":"United Kingdom",
+		"subcats":[
+			{"code":"all",	"name":"All"},
+			{"code":"England",	"name":"England"}
+		]
 	}
 ]
