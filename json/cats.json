@@ -77,7 +77,8 @@
 			{"code":"Iberia",	"name":"Iberia"},
 			{"code":"Balkan",	"name":"Balkan"},
 			{"code":"Central",	"name":"Central"},
-			{"code":"Nordic",	"name":"Nordic"}
+			{"code":"Nordic",	"name":"Nordic"},
+			{"code":"Russia",	"name":"Russia"}
 		]
 	},
 	{	"code":"UK",
